@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>$(CommonTargetFrameworks)</TargetFramework>
+  </PropertyGroup>
+	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' or '$(BuildingByReSharper)' == 'true'">
+		<ProjectReference Include="$(HexalithPath)\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime\Hexalith.Infrastructure.DaprRuntime.csproj" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' != 'true' and '$(BuildingByReSharper)' != 'true'">
+		<PackageReference Include="Hexalith.Infrastructure.DaprRuntime" Version="$(HexalithVersion)" />
+	</ItemGroup>
+	<ItemGroup>
+    <ProjectReference Include="..\..\Domain\Hexalith.Inventories.Domain\Hexalith.Inventories.Domain.csproj" />
+    <ProjectReference Include="..\Hexalith.Inventories.DaprRuntime.Abstractions\Hexalith.Inventories.DaprRuntime.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

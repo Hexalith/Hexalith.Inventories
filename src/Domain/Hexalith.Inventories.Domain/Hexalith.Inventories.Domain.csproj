@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>$(CommonTargetFrameworks)</TargetFramework>
+		<NoWarn>$(NoWarn);CA1024;</NoWarn>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Hexalith.Inventories.Events\Hexalith.Inventories.Events.csproj" />
+	</ItemGroup>
+</Project>

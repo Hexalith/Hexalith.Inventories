@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(CommonTargetFrameworks)</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Hexalith.Inventories.Events\Hexalith.Inventories.Events.csproj" />
+    <ProjectReference Include="..\Hexalith.Inventories.Commands\Hexalith.Inventories.Commands.csproj" />
+  </ItemGroup>
+</Project>
