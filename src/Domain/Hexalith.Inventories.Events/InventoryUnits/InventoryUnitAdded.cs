@@ -58,7 +58,7 @@ public class InventoryUnitAdded : InventoryUnitEvent
     /// Initializes a new instance of the <see cref="InventoryUnitAdded" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public InventoryUnitAdded() => Name = string.Empty;
+    public InventoryUnitAdded() => Description = Name = string.Empty;
 
     /// <summary>
     /// Gets the description.

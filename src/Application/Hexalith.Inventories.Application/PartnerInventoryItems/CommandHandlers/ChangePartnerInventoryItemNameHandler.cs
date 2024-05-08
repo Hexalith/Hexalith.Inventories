@@ -25,8 +25,8 @@ using System.Threading.Tasks;
 using Hexalith.Application.Commands;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Messages;
-using Hexalith.Domain.PartnerInventoryItems;
 using Hexalith.Inventories.Commands.PartnerInventoryItems;
+using Hexalith.Inventories.Events.PartnerInventoryItems;
 
 /// <summary>
 /// Class ChangeCustomerInformationHandler.

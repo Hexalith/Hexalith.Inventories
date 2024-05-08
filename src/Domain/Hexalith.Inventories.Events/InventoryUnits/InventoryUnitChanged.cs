@@ -14,12 +14,11 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Domain.InventoryUnits;
+namespace Hexalith.Inventories.Events.InventoryUnits;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.InventoryUnits;
 
 /// <summary>
 /// Class InventoryUnitConversionInformationChanged.
@@ -59,7 +58,7 @@ public class InventoryUnitChanged : InventoryUnitEvent
     /// Initializes a new instance of the <see cref="InventoryUnitChanged" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public InventoryUnitChanged() => Name = string.Empty;
+    public InventoryUnitChanged() => Description = Name = string.Empty;
 
     /// <summary>
     /// Gets the description.

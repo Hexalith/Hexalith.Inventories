@@ -59,7 +59,7 @@ public class ProductAdded : ProductEvent
     /// Initializes a new instance of the <see cref="ProductAdded" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public ProductAdded() => Name = string.Empty;
+    public ProductAdded() => Description = Name = string.Empty;
 
     /// <summary>
     /// Gets or sets the description.

@@ -17,12 +17,11 @@
 /// <summary>
 /// The Events namespace.
 /// </summary>
-namespace Hexalith.Domain.Products;
+namespace Hexalith.Inventories.Events.Products;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.Products;
 
 /// <summary>
 /// Class ProductConversionInformationChanged.
@@ -59,7 +58,7 @@ public class ProductDescriptionChanged : ProductEvent
     /// Initializes a new instance of the <see cref="ProductDescriptionChanged" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public ProductDescriptionChanged() => Name = string.Empty;
+    public ProductDescriptionChanged() => Description = Name = string.Empty;
 
     /// <summary>
     /// Gets or sets the description.

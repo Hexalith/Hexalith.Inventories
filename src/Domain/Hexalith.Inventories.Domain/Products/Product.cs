@@ -23,6 +23,7 @@ using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
 using Hexalith.Domain.Products;
 using Hexalith.Domain.ValueObjects;
+using Hexalith.Inventories.Events.Products;
 
 /// <summary>
 /// Class InventoryItem.
@@ -83,7 +84,7 @@ public record Product(
             ProductDimensionsChanged changed => this with
             {
                 Dimensions = changed.ProductDimensions,
-                ExcludedDimensionCombinaisons = changed.ExcludedDimensionCombinaisons,
+                ExcludedDimensionCombinaisons = changed.ExcludedDimensionCombinations,
             },
             ProductAdded => throw new InvalidAggregateEventException(this, domainEvent, true),
             _ => throw new InvalidAggregateEventException(this, domainEvent, false),

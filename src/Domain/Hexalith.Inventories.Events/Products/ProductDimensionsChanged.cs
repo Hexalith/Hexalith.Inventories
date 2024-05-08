@@ -17,13 +17,12 @@
 /// <summary>
 /// The Events namespace.
 /// </summary>
-namespace Hexalith.Domain.Products;
+namespace Hexalith.Inventories.Events.Products;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Domain.ValueObjects;
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.Products;
 
 /// <summary>
 /// Class ProductConversionInformationChanged.
@@ -41,17 +40,17 @@ public class ProductDimensionsChanged : ProductEvent
     /// <param name="originId">The origin identifier.</param>
     /// <param name="id">The identifier.</param>
     /// <param name="productDimensions">The product dimensions.</param>
-    /// <param name="excludedDimensionCombinaisons">The excluded dimension combinaisons.</param>
+    /// <param name="excludedDimensionCombinations">The excluded dimension combinations.</param>
     public ProductDimensionsChanged(
         string partitionId,
         string originId,
         string id,
         IEnumerable<DimensionValue> productDimensions,
-        IEnumerable<IEnumerable<string>> excludedDimensionCombinaisons)
+        IEnumerable<IEnumerable<string>> excludedDimensionCombinations)
         : base(partitionId, originId, id)
     {
         ProductDimensions = productDimensions;
-        ExcludedDimensionCombinaisons = excludedDimensionCombinaisons;
+        ExcludedDimensionCombinations = excludedDimensionCombinations;
     }
 
     /// <summary>
@@ -60,14 +59,16 @@ public class ProductDimensionsChanged : ProductEvent
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
     public ProductDimensionsChanged()
     {
+        ExcludedDimensionCombinations = [];
+        ProductDimensions = [];
     }
 
     /// <summary>
-    /// Gets or sets the excluded dimension combinaisons.
+    /// Gets or sets the excluded dimension combinations.
     /// </summary>
-    /// <value>The excluded dimension combinaisons.</value>
+    /// <value>The excluded dimension combinations.</value>
     [DataMember(Order = 21)]
-    public IEnumerable<IEnumerable<string>> ExcludedDimensionCombinaisons { get; set; }
+    public IEnumerable<IEnumerable<string>> ExcludedDimensionCombinations { get; set; }
 
     /// <summary>
     /// Gets or sets the product dimensions.

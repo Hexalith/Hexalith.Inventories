@@ -59,7 +59,11 @@ public abstract class InventoryUnitConversionEvent : CompanyEntityEvent
     /// Initializes a new instance of the <see cref="InventoryUnitConversionEvent" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    protected InventoryUnitConversionEvent() => ToUnitId = string.Empty;
+    protected InventoryUnitConversionEvent()
+    {
+        ToUnitId = string.Empty;
+        InventoryItemId = string.Empty;
+    }
 
     /// <summary>
     /// Gets the inventory item identifier.

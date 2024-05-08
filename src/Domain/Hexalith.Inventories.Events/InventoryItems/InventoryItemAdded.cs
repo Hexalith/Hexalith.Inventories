@@ -59,7 +59,11 @@ public class InventoryItemAdded : InventoryItemEvent
     /// Initializes a new instance of the <see cref="InventoryItemAdded" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public InventoryItemAdded() => Name = Description = string.Empty;
+    public InventoryItemAdded()
+    {
+        Name = Description = string.Empty;
+        Dimensions = [];
+    }
 
     /// <summary>
     /// Gets or sets the description.

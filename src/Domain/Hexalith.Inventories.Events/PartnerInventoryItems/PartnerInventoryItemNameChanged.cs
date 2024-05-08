@@ -4,12 +4,11 @@
 //     See LICENSE file in the project root for full license information.
 // </copyright>
 
-namespace Hexalith.Domain.PartnerInventoryItems;
+namespace Hexalith.Inventories.Events.PartnerInventoryItems;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.PartnerInventoryItems;
 
 /// <summary>
 /// Class PartnerInventoryItemInformationChanged.
@@ -37,21 +36,19 @@ public class PartnerInventoryItemNameChanged : PartnerInventoryItemEvent
         string partnerType,
         string partnerId,
         string id,
-        string name)
+        string? name)
         : base(partitionId, companyId, originId, partnerType, partnerId, id) => Name = name;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="PartnerInventoryItemNameChanged" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public PartnerInventoryItemNameChanged()
-    {
-    }
+    public PartnerInventoryItemNameChanged() => Name = string.Empty;
 
     /// <summary>
     /// Gets or sets the name.
     /// </summary>
     /// <value>The name.</value>
     [DataMember(Order = 20)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 }
