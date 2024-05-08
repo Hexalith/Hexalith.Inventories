@@ -21,7 +21,6 @@ using System.Runtime.Serialization;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
-using Hexalith.Domain.InventoryUnitConversions;
 using Hexalith.Inventories.Events.InventoryUnitConversions;
 
 /// <summary>
