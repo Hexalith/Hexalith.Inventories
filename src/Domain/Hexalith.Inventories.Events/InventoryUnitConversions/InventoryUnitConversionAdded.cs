@@ -46,7 +46,7 @@ public class InventoryUnitConversionAdded : InventoryUnitConversionEvent
         string originId,
         string id,
         string toUnitId,
-        string inventoryItemId,
+        string? inventoryItemId,
         decimal factor,
         int roundDecimals)
         : base(partitionId, companyId, originId, id, toUnitId, inventoryItemId)

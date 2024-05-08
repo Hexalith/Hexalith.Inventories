@@ -45,7 +45,7 @@ public class InventoryUnitAdded : InventoryUnitEvent
         string originId,
         string id,
         string name,
-        string description,
+        string? description,
         int roundDecimals)
         : base(partitionId, companyId, originId, id)
     {
@@ -58,14 +58,14 @@ public class InventoryUnitAdded : InventoryUnitEvent
     /// Initializes a new instance of the <see cref="InventoryUnitAdded" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public InventoryUnitAdded() => Description = Name = string.Empty;
+    public InventoryUnitAdded() => Name = string.Empty;
 
     /// <summary>
     /// Gets the description.
     /// </summary>
     /// <value>The description.</value>
     [DataMember(Order = 21)]
-    public string Description { get; }
+    public string? Description { get; }
 
     /// <summary>
     /// Gets the factor.

@@ -43,7 +43,7 @@ public class AddInventoryItem : InventoryItemCommand
         string companyId,
         string originId,
         string id,
-        IEnumerable<DimensionValue>? dimensions,
+        IEnumerable<DimensionValue> dimensions,
         string name,
         string? description)
         : base(partitionId, companyId, originId, id)
@@ -57,7 +57,11 @@ public class AddInventoryItem : InventoryItemCommand
     /// Initializes a new instance of the <see cref="AddInventoryItem" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public AddInventoryItem() => Name = Description = string.Empty;
+    public AddInventoryItem()
+    {
+        Name = Description = string.Empty;
+        Dimensions = [];
+    }
 
     /// <summary>
     /// Gets or sets the description of the inventory item.
@@ -71,7 +75,7 @@ public class AddInventoryItem : InventoryItemCommand
     /// </summary>
     /// <value>The dimensions.</value>
     [DataMember(Order = 20)]
-    public IEnumerable<DimensionValue>? Dimensions { get; set; }
+    public IEnumerable<DimensionValue> Dimensions { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the inventory item.

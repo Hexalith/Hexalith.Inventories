@@ -14,12 +14,11 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Domain.InventoryUnitConversions;
+namespace Hexalith.Inventories.Events.InventoryUnitConversions;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.InventoryUnitConversions;
 
 /// <summary>
 /// Class InventoryUnitConversionInformationChanged.
@@ -47,7 +46,7 @@ public class InventoryUnitConversionChanged : InventoryUnitConversionEvent
         string originId,
         string id,
         string toUnitId,
-        string inventoryItemId,
+        string? inventoryItemId,
         decimal factor,
         int roundDecimals)
         : base(partitionId, companyId, originId, id, toUnitId, inventoryItemId)

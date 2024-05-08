@@ -47,7 +47,7 @@ public class InventoryItemAdded : InventoryItemEvent
         string id,
         IEnumerable<DimensionValue> dimensions,
         string name,
-        string description)
+        string? description)
         : base(partitionId, companyId, originId, id)
     {
         Dimensions = dimensions;
@@ -61,7 +61,7 @@ public class InventoryItemAdded : InventoryItemEvent
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
     public InventoryItemAdded()
     {
-        Name = Description = string.Empty;
+        Name = string.Empty;
         Dimensions = [];
     }
 
@@ -70,7 +70,7 @@ public class InventoryItemAdded : InventoryItemEvent
     /// </summary>
     /// <value>The description.</value>
     [DataMember(Order = 22)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the dimensions.

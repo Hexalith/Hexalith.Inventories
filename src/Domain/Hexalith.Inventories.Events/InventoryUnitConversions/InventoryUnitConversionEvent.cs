@@ -48,7 +48,7 @@ public abstract class InventoryUnitConversionEvent : CompanyEntityEvent
         string originId,
         string id,
         string toUnitId,
-        string inventoryItemId)
+        string? inventoryItemId)
         : base(partitionId, companyId, originId, id)
     {
         ToUnitId = toUnitId;
@@ -59,18 +59,14 @@ public abstract class InventoryUnitConversionEvent : CompanyEntityEvent
     /// Initializes a new instance of the <see cref="InventoryUnitConversionEvent" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    protected InventoryUnitConversionEvent()
-    {
-        ToUnitId = string.Empty;
-        InventoryItemId = string.Empty;
-    }
+    protected InventoryUnitConversionEvent() => ToUnitId = string.Empty;
 
     /// <summary>
     /// Gets the inventory item identifier.
     /// </summary>
     /// <value>The inventory item identifier.</value>
     [DataMember(Order = 11)]
-    public string InventoryItemId { get; }
+    public string? InventoryItemId { get; }
 
     /// <summary>
     /// Gets converts to unitId.

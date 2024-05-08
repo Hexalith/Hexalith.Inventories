@@ -14,12 +14,11 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Domain.InventoryItems;
+namespace Hexalith.Inventories.Events.InventoryItems;
 
 using System.Runtime.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Inventories.Events.InventoryItems;
 
 /// <summary>
 /// Class InventoryItemInformationChanged.
@@ -45,7 +44,7 @@ public class InventoryItemDescriptionChanged : InventoryItemEvent
         string originId,
         string id,
         string name,
-        string description)
+        string? description)
         : base(partitionId, companyId, originId, id)
     {
         Name = name;
@@ -56,14 +55,14 @@ public class InventoryItemDescriptionChanged : InventoryItemEvent
     /// Initializes a new instance of the <see cref="InventoryItemDescriptionChanged" /> class.
     /// </summary>
     [Obsolete(DefaultLabels.ForSerializationOnly, true)]
-    public InventoryItemDescriptionChanged() => Name = Description = string.Empty;
+    public InventoryItemDescriptionChanged() => Name = string.Empty;
 
     /// <summary>
     /// Gets the description.
     /// </summary>
     /// <value>The description.</value>
     [DataMember(Order = 21)]
-    public string Description { get; }
+    public string? Description { get; }
 
     /// <summary>
     /// Gets or sets the name.
