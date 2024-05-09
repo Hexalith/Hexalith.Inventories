@@ -63,8 +63,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Domain.Organizatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.Parties.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.Parties.Abstractions\Hexalith.Infrastructure.DaprRuntime.Parties.Abstractions.csproj", "{53512DC6-992E-4ABA-9D6D-AAF359BBB319}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.Inventories.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.Inventories.Abstractions\Hexalith.Infrastructure.DaprRuntime.Inventories.Abstractions.csproj", "{275EC7FD-558A-4920-95E8-EF04AE313C5F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Aggregates", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Aggregates\Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Aggregates.csproj", "{831B3337-84AD-4AB0-9312-38444AAF17B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Projections", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Projections\Hexalith.Infrastructure.DaprRuntime.ExternalSystems.Projections.csproj", "{FACEC4B4-B685-4853-98CA-F38587A025C0}"
@@ -166,8 +164,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Inventories.Events
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{69351242-0215-4623-91C6-1CD2F23D17AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Inventories.UI", "src\UI\Hexalith.Inventories.UI\Hexalith.Inventories.UI.csproj", "{C5524751-5178-4D1A-AEA1-C6B45BCE55F6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{3A505FC6-CBD6-4D4F-BF48-329C3148282B}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -200,6 +196,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.UI.Modules.Abstractions", "Hexalith\src\Core\UI\Hexalith.UI.Modules.Abstractions\Hexalith.UI.Modules.Abstractions.csproj", "{9A85438A-48CC-404E-9B1C-A29269FE78B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.UI.Modules", "Hexalith\src\Core\UI\Hexalith.UI.Modules\Hexalith.UI.Modules.csproj", "{92269465-385D-4598-9883-28379DE598C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Inventories.UI", "src\UI\Hexalith.Inventories.UI\Hexalith.Inventories.UI.csproj", "{57A53E6F-676D-476F-93C3-01A11FF782B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,10 +301,6 @@ Global
 		{53512DC6-992E-4ABA-9D6D-AAF359BBB319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53512DC6-992E-4ABA-9D6D-AAF359BBB319}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53512DC6-992E-4ABA-9D6D-AAF359BBB319}.Release|Any CPU.Build.0 = Release|Any CPU
-		{275EC7FD-558A-4920-95E8-EF04AE313C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{275EC7FD-558A-4920-95E8-EF04AE313C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{275EC7FD-558A-4920-95E8-EF04AE313C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{275EC7FD-558A-4920-95E8-EF04AE313C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{831B3337-84AD-4AB0-9312-38444AAF17B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{831B3337-84AD-4AB0-9312-38444AAF17B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831B3337-84AD-4AB0-9312-38444AAF17B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -479,10 +473,6 @@ Global
 		{6401CAA6-7331-4F6A-AB3D-EDEF48EBB829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6401CAA6-7331-4F6A-AB3D-EDEF48EBB829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6401CAA6-7331-4F6A-AB3D-EDEF48EBB829}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5524751-5178-4D1A-AEA1-C6B45BCE55F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5524751-5178-4D1A-AEA1-C6B45BCE55F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5524751-5178-4D1A-AEA1-C6B45BCE55F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5524751-5178-4D1A-AEA1-C6B45BCE55F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87A78320-56AC-44E5-BC30-04AD1AE1F40F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87A78320-56AC-44E5-BC30-04AD1AE1F40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87A78320-56AC-44E5-BC30-04AD1AE1F40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -511,6 +501,10 @@ Global
 		{92269465-385D-4598-9883-28379DE598C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92269465-385D-4598-9883-28379DE598C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92269465-385D-4598-9883-28379DE598C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -545,7 +539,6 @@ Global
 		{4BFB8526-A11F-4946-9905-7F00EECEF7FF} = {AA983AFF-9CBC-4F2A-98E3-3CACA5039C61}
 		{71564D94-DA05-4FCA-985F-E5574EFF2723} = {5A9735A3-CEE9-4E50-B2FD-54F0BF402002}
 		{53512DC6-992E-4ABA-9D6D-AAF359BBB319} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
-		{275EC7FD-558A-4920-95E8-EF04AE313C5F} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{831B3337-84AD-4AB0-9312-38444AAF17B0} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{FACEC4B4-B685-4853-98CA-F38587A025C0} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{EB1E9B5C-4A1E-48F7-BE49-0C1D8E2CE84C} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
@@ -594,7 +587,6 @@ Global
 		{6FAF96B0-55B1-451E-A09A-0A1EC017312C} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{6401CAA6-7331-4F6A-AB3D-EDEF48EBB829} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{69351242-0215-4623-91C6-1CD2F23D17AB} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
-		{C5524751-5178-4D1A-AEA1-C6B45BCE55F6} = {69351242-0215-4623-91C6-1CD2F23D17AB}
 		{3A505FC6-CBD6-4D4F-BF48-329C3148282B} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
 		{E0E8D9A4-0B77-4F2D-BD6E-7931FEE42ACB} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
 		{87A78320-56AC-44E5-BC30-04AD1AE1F40F} = {E0E8D9A4-0B77-4F2D-BD6E-7931FEE42ACB}
@@ -604,6 +596,7 @@ Global
 		{6A210437-68DA-4468-AF3C-4887406BD03B} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{9A85438A-48CC-404E-9B1C-A29269FE78B9} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{92269465-385D-4598-9883-28379DE598C6} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
+		{57A53E6F-676D-476F-93C3-01A11FF782B5} = {69351242-0215-4623-91C6-1CD2F23D17AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09CBB595-8996-4C7F-9C48-4C58AD9293AC}

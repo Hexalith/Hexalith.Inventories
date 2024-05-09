@@ -4,12 +4,14 @@
 //     See LICENSE file in the project root for full license information.
 // </copyright>
 
-namespace Hexalith.UnitTests.Core.Domain.Inventories.ValueObjects;
+namespace Hexalith.Inventories.UnitTests.Inventories.ValueObjects;
 
 using FluentAssertions;
 
 using Hexalith.TestMocks;
 using Hexalith.UnitTests.Core.Domain.Inventories;
+
+using Xunit;
 
 public class ProductIdentifierTest
 {
