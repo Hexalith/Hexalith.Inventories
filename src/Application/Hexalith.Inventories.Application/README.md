@@ -1,2 +1,2 @@
-# Hexalith.Application.Parties
+# Hexalith.Inventories.Application
 
