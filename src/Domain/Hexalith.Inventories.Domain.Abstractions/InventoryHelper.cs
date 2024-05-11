@@ -7,60 +7,114 @@ using Hexalith.Domain.Aggregates;
 /// </summary>
 public static class InventoryHelper
 {
-    public const char AggregateIdSeperator = '-';
+    /// <summary>
+    /// Gets the identifier separator.
+    /// </summary>
+    /// <value>The identifier separator.</value>
+    public static char IdSeparator => '-';
 
     /// <summary>
-    /// The aggregate name for the InventoryItem.
+    /// Gets the aggregate name for the InventoryItem.
     /// </summary>
-    public const string InventoryItemAggregateName = "InventoryItem";
+    public static string InventoryItemAggregateName => "InventoryItem";
 
     /// <summary>
-    /// The aggregate name for the InventoryItemStock.
+    /// Gets the aggregate name for the InventoryItemStock.
     /// </summary>
-    public const string InventoryItemStockAggregateName = "InventoryItemStock";
+    public static string InventoryItemStockAggregateName => "InventoryItemStock";
 
     /// <summary>
-    /// The aggregate name for the InventoryUnit.
+    /// Gets the aggregate name for the InventoryUnit.
     /// </summary>
-    public const string InventoryUnitAggregateName = "InventoryUnit";
+    public static string InventoryUnitAggregateName => "InventoryUnit";
 
     /// <summary>
-    /// The aggregate name for the InventoryUnitConversion.
+    /// Gets the aggregate name for the InventoryUnitConversion.
     /// </summary>
-    public const string InventoryUnitConversionAggregateName = "InventoryUnitConversion";
+    public static string InventoryUnitConversionAggregateName => "InventoryUnitConversion";
 
     /// <summary>
-    /// The aggregate name for the PartnerInventoryItem.
+    /// Gets the aggregate name for the PartnerInventoryItem.
     /// </summary>
-    public const string PartnerInventoryItemAggregateName = "PartnerInventoryItem";
+    public static string PartnerInventoryItemAggregateName => "PartnerInventoryItem";
 
     /// <summary>
-    /// The aggregate name for the Product.
+    /// Gets the aggregate name for the Product.
     /// </summary>
-    public const string ProductAggregateName = "Product";
+    public static string ProductAggregateName => "Product";
 
+    /// <summary>
+    /// Gets the aggregate identifier for the InventoryItem.
+    /// </summary>
+    /// <param name="partitionId">The partition identifier.</param>
+    /// <param name="companyId">The company identifier.</param>
+    /// <param name="originId">The origin identifier.</param>
+    /// <param name="id">The identifier.</param>
+    /// <returns>The aggregate identifier.</returns>
     public static string GetInventoryItemAggregateId(string partitionId, string companyId, string originId, string id)
-                => Aggregate.Normalize(InventoryItemAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + companyId + AggregateIdSeperator + originId + AggregateIdSeperator + id);
-
-    public static string GetInventoryItemStockAggregateId(string partitionId, string originId, string companyId, string locationId, string id)
-                => Aggregate.Normalize(InventoryItemStockAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + companyId + AggregateIdSeperator + locationId + AggregateIdSeperator + originId + AggregateIdSeperator + id);
-
-    public static string GetInventoryUnitAggregateId(string partitionId, string companyId, string originId, string id)
-                => Aggregate.Normalize(InventoryUnitAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + companyId + AggregateIdSeperator + originId + AggregateIdSeperator + id);
-
-    public static string GetInventoryUnitConversionAggregateId(string partitionId, string companyId, string originId, string id, string toUnitId, string? inventoryItemId = null)
-            => Aggregate.Normalize(InventoryUnitConversionAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + companyId + AggregateIdSeperator + originId + AggregateIdSeperator + id + AggregateIdSeperator + toUnitId + (string.IsNullOrWhiteSpace(inventoryItemId) ? string.Empty : AggregateIdSeperator + inventoryItemId));
-
-    public static string GetPartnerInventoryItemAggregateId(string partitionId, string companyId, string originId, string partnerType, string partnerId, string id)
-        => Aggregate.Normalize(PartnerInventoryItemAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + companyId + AggregateIdSeperator + originId + AggregateIdSeperator + partnerType + AggregateIdSeperator + partnerId + AggregateIdSeperator + id);
+        => Aggregate.Normalize(InventoryItemAggregateName + IdSeparator + partitionId + IdSeparator + companyId + IdSeparator + originId + IdSeparator + id);
 
     /// <summary>
-    /// Gets the product aggregate identifier.
+    /// Gets the aggregate identifier for the InventoryItemStock.
+    /// </summary>
+    /// <param name="partitionId">The partition identifier.</param>
+    /// <param name="originId">The origin identifier.</param>
+    /// <param name="companyId">The company identifier.</param>
+    /// <param name="locationId">The location identifier.</param>
+    /// <param name="id">The identifier.</param>
+    /// <returns>The aggregate identifier.</returns>
+    public static string GetInventoryItemStockAggregateId(string partitionId, string originId, string companyId, string locationId, string id)
+        => Aggregate.Normalize(InventoryItemStockAggregateName + IdSeparator + partitionId + IdSeparator + companyId + IdSeparator + locationId + IdSeparator + originId + IdSeparator + id);
+
+    /// <summary>
+    /// Gets the aggregate identifier for the InventoryUnit.
+    /// </summary>
+    /// <param name="partitionId">The partition identifier.</param>
+    /// <param name="companyId">The company identifier.</param>
+    /// <param name="originId">The origin identifier.</param>
+    /// <param name="id">The identifier.</param>
+    /// <returns>The aggregate identifier.</returns>
+    public static string GetInventoryUnitAggregateId(string partitionId, string companyId, string originId, string id)
+        => Aggregate.Normalize(InventoryUnitAggregateName + IdSeparator + partitionId + IdSeparator + companyId + IdSeparator + originId + IdSeparator + id);
+
+    /// <summary>
+    /// Gets the aggregate identifier for the InventoryUnitConversion.
+    /// </summary>
+    /// <param name="partitionId">The partition identifier.</param>
+    /// <param name="companyId">The company identifier.</param>
+    /// <param name="originId">The origin identifier.</param>
+    /// <param name="id">The identifier.</param>
+    /// <param name="toUnitId">The target unit identifier.</param>
+    /// <param name="inventoryItemId">The inventory item identifier (optional).</param>
+    /// <returns>The aggregate identifier.</returns>
+    public static string GetInventoryUnitConversionAggregateId(string partitionId, string companyId, string originId, string id, string toUnitId, string? inventoryItemId)
+        => Aggregate.Normalize(
+            InventoryUnitConversionAggregateName + IdSeparator + partitionId + IdSeparator + companyId + IdSeparator + originId + IdSeparator + id + IdSeparator + toUnitId + (
+                string.IsNullOrWhiteSpace(inventoryItemId)
+                    ? string.Empty :
+                    IdSeparator + inventoryItemId));
+
+    /// <summary>
+    /// Gets the aggregate identifier for the PartnerInventoryItem.
+    /// </summary>
+    /// <param name="partitionId">The partition identifier.</param>
+    /// <param name="companyId">The company identifier.</param>
+    /// <param name="originId">The origin identifier.</param>
+    /// <param name="partnerType">The partner type.</param>
+    /// <param name="partnerId">The partner identifier.</param>
+    /// <param name="id">The identifier.</param>
+    /// <returns>The aggregate identifier.</returns>
+    public static string GetPartnerInventoryItemAggregateId(string partitionId, string companyId, string originId, string partnerType, string partnerId, string id)
+        => Aggregate.Normalize(
+            PartnerInventoryItemAggregateName + IdSeparator + partitionId + IdSeparator + companyId + IdSeparator + originId + IdSeparator + partnerType + IdSeparator + partnerId + IdSeparator + id);
+
+    /// <summary>
+    /// Gets the aggregate identifier for the Product.
     /// </summary>
     /// <param name="partitionId">The partition identifier.</param>
     /// <param name="originId">The origin identifier.</param>
     /// <param name="id">The identifier.</param>
-    /// <returns>string.</returns>
+    /// <returns>The aggregate identifier.</returns>
     public static string GetProductAggregateId(string partitionId, string originId, string id)
-        => Aggregate.Normalize(ProductAggregateName + AggregateIdSeperator + partitionId + AggregateIdSeperator + originId + AggregateIdSeperator + id);
+        => Aggregate.Normalize(ProductAggregateName + IdSeparator + partitionId + IdSeparator + originId + IdSeparator + id);
 }
