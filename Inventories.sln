@@ -201,8 +201,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Inventories.UI", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34E4AB9D-C6DD-4FB7-A205-4544129F7AE0}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\preview_ci.yml = .github\workflows\preview_ci.yml
-		.github\workflows\release_ci.yml = .github\workflows\release_ci.yml
+		.github\workflows\hexalith_build.yml = .github\workflows\hexalith_build.yml
 		.github\workflows\semgrep.yml = .github\workflows\semgrep.yml
 		.github\workflows\sonarqube.yml = .github\workflows\sonarqube.yml
 	EndProjectSection

@@ -1,11 +1,19 @@
-name: Preview - CI
+name: Hexalith Inventories Build
 on:
   push:
     paths-ignore:
       - '**/*.md'
       - 'mkdocs.yml'
       - 'docs/**/*'
-    branches: [ main ]
+    branches: 
+      - main
+      - release-*
+    tags:
+      - 'v*'
+  pull_request:
+    branches: 
+      - master
+      - release-*
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
@@ -14,13 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Build, Test, Publish
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Setup .NET 8.0
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Add Aspire Workloads
+      run: |
+        dotnet workload install aspire
     - name: Build Version
       run: |
         dotnet tool install --global minver-cli --version 5.0.0
@@ -30,18 +41,23 @@ jobs:
         echo "VERSION=$version"
     - name: Build
       run: |
+    - name: Build
+      run: |
         dotnet build './src/Application/Hexalith.Inventories.Application/Hexalith.Inventories.Application.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Application/Hexalith.Inventories.Commands/Hexalith.Inventories.Commands.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Domain/Hexalith.Inventories.Domain/Hexalith.Inventories.Domain.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Domain/Hexalith.Inventories.Domain.Abstractions/Hexalith.Inventories.Domain.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Domain/Hexalith.Inventories.Events/Hexalith.Inventories.Events.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/Infrastructure/Hexalith.Inventories.EventsWebApis/Hexalith.Inventories.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/Infrastructure/Hexalith.Inventories.CommandsWebApis/Hexalith.Inventories.CommandsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/Infrastructure/Hexalith.Inventories.DaprRuntime.Abstractions/Hexalith.Inventories.DaprRuntime.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/Infrastructure/Hexalith.Inventories.DaprRuntime/Hexalith.Inventories.DaprRuntime.csproj' --configuration Release -p:Version=${{ env.VERSION }}
     - name: Unit Tests
       run: |
-        dotnet test -c Release --no-restore --no-build ./test/Hexalith.Inventories.UnitTests/Hexalith.Inventories.UnitTests.csproj 
+        dotnet test -c Release --no-restore --no-build ./test/Hexalith.Inventories.UnitTests/Hexalith.Inventories.csproj
     - name: Deploy preview nuget packages
       run: |
-        dotnet nuget push './src/**/*.nupkg' -k ${{secrets.GITHUB_TOKEN}} -n -s https://nuget.pkg.github.com/Hexalith/index.json --skip-duplicate
-    - name: Login to container registry ${{ vars.AZURE_REGISTRY }}
+        dotnet nuget push './src/Core/**/*.nupkg' -k ${{secrets.GITHUB_TOKEN}} -n -s https://nuget.pkg.github.com/Hexalith/index.json --skip-duplicate   - name: Login to container registry ${{ vars.AZURE_REGISTRY }}
       uses: docker/login-action@v3
       with:
         registry: ${{ vars.AZURE_REGISTRY }}
@@ -50,4 +66,4 @@ jobs:
     - name: Publish and push the Inventories server container images to the container registry
       run: |
           dotnet publish './src/Servers/Hexalith.Server.Inventories/Hexalith.Server.Inventories.csproj' /t:PublishContainer --configuration Release --os linux --arch x64 -p:ContainerImageTags='"${{ env.VERSION }};latest"' -p:ContainerRegistry=${{ vars.AZURE_REGISTRY }}
-
+ 
