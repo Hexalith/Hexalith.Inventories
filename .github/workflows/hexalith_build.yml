@@ -62,7 +62,7 @@ jobs:
     - name: Publish release packages to Nuget
       if: startswith(github.ref, 'refs/tags/v') 
       run: |
-        dotnet nuget push './src/**/*.nupkg' --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json --skip-duplicate    - name: Deploy preview nuget packages
+        dotnet nuget push './src/**/*.nupkg' --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json --skip-duplicate    
     - name: Login to the container registry
       uses: docker/login-action@v3
       with:
