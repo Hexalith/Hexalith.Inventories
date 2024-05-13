@@ -30,7 +30,7 @@ using Hexalith.Inventories.Domain;
 /// <seealso cref="Domain.Commands.BaseCommand" />
 [DataContract]
 [Serializable]
-public abstract class InventoryItemCommand : CompanyEntityCommand
+public class InventoryItemCommand : CompanyEntityCommand
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="InventoryItemCommand"/> class.
