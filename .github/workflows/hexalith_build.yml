@@ -43,7 +43,7 @@ jobs:
       run: |
     - name: Build
       run: |
-       dotnet build './src/Application/Hexalith.Inventories.Application/Hexalith.Inventories.Application.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/Application/Hexalith.Inventories.Application/Hexalith.Inventories.Application.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Application/Hexalith.Inventories.Commands/Hexalith.Inventories.Commands.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Domain/Hexalith.Inventories.Domain/Hexalith.Inventories.Domain.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Domain/Hexalith.Inventories.Domain.Abstractions/Hexalith.Inventories.Domain.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
@@ -52,6 +52,7 @@ jobs:
         dotnet build './src/Infrastructure/Hexalith.Inventories.DaprRuntime/Hexalith.Inventories.DaprRuntime.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Infrastructure/Hexalith.Inventories.DaprRuntime.Abstractions/Hexalith.Inventories.DaprRuntime.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Infrastructure/Hexalith.Inventories.EventsWebApis/Hexalith.Inventories.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+        dotnet build './src/UI/Hexalith.Inventories.UI/Hexalith.Inventories.UI.csproj' --configuration Release -p:Version=${{ env.VERSION }}
     - name: Unit Tests
       run: |
         dotnet test -c Release --no-restore --no-build ./test/Hexalith.Inventories.UnitTests/Hexalith.Inventories.UnitTests.csproj

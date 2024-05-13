@@ -120,11 +120,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{69351242-0215-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{3A505FC6-CBD6-4D4F-BF48-329C3148282B}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		src\BuildFiles\.stylecop.json = src\BuildFiles\.stylecop.json
-		src\BuildFiles\.stylecop.ruleset = src\BuildFiles\.stylecop.ruleset
 		Directory.Build.props = Directory.Build.props
+		.github\workflows\hexalith_build.yml = .github\workflows\hexalith_build.yml
 		src\BuildFiles\Project.Common.props = src\BuildFiles\Project.Common.props
+		.github\workflows\semgrep.yml = .github\workflows\semgrep.yml
+		.github\workflows\sonarqube.yml = .github\workflows\sonarqube.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{E0E8D9A4-0B77-4F2D-BD6E-7931FEE42ACB}"
@@ -154,10 +154,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Inventories.UI", "src\UI\Hexalith.Inventories.UI\Hexalith.Inventories.UI.csproj", "{57A53E6F-676D-476F-93C3-01A11FF782B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34E4AB9D-C6DD-4FB7-A205-4544129F7AE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_global", "_global", "{892E2B9B-3FF1-4098-9A6C-CD97CAB5A540}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\hexalith_build.yml = .github\workflows\hexalith_build.yml
-		.github\workflows\semgrep.yml = .github\workflows\semgrep.yml
-		.github\workflows\sonarqube.yml = .github\workflows\sonarqube.yml
+		.editorconfig = .editorconfig
+		src\BuildFiles\.stylecop.json = src\BuildFiles\.stylecop.json
+		src\BuildFiles\.stylecop.ruleset = src\BuildFiles\.stylecop.ruleset
+		src\Servers\publish_containers.ps1 = src\Servers\publish_containers.ps1
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
@@ -443,6 +448,7 @@ Global
 		{9A85438A-48CC-404E-9B1C-A29269FE78B9} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{92269465-385D-4598-9883-28379DE598C6} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{57A53E6F-676D-476F-93C3-01A11FF782B5} = {69351242-0215-4623-91C6-1CD2F23D17AB}
+		{892E2B9B-3FF1-4098-9A6C-CD97CAB5A540} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09CBB595-8996-4C7F-9C48-4C58AD9293AC}
