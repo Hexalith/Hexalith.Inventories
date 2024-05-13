@@ -19,7 +19,7 @@ namespace Hexalith.Inventories.Commands.InventoryUnits;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-using Hexalith.Application.Organizations.Commands;
+using Hexalith.Application.Commands;
 using Hexalith.Extensions;
 using Hexalith.Inventories.Domain;
 
@@ -30,7 +30,7 @@ using Hexalith.Inventories.Domain;
 /// <seealso cref="Domain.Commands.CompanyEntityCommand" />
 [DataContract]
 [Serializable]
-public abstract class InventoryUnitCommand : CompanyEntityCommand
+public class InventoryUnitCommand : CompanyEntityCommand
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="InventoryUnitCommand" /> class.

@@ -19,7 +19,7 @@ namespace Hexalith.Inventories.Commands.InventoryItems;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-using Hexalith.Application.Organizations.Commands;
+using Hexalith.Application.Commands;
 using Hexalith.Extensions;
 using Hexalith.Inventories.Domain;
 

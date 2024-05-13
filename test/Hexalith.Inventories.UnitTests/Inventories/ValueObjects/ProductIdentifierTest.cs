@@ -21,5 +21,5 @@ public class ProductIdentifierTest
 
     [Fact]
     public void ContactShouldBeJsonSerializable()
-        => DummyInventoriesDomainHelper.DummyProductIdentifier().Should().BeJsonSerializable();
+        => DummyInventoriesDomainHelper.DummyProductIdentifier().Should().BeJsonSerializable(string.Empty);
 }

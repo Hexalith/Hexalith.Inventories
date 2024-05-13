@@ -18,7 +18,7 @@ using Hexalith.Extensions;
 /// <seealso cref="Domain.Commands.CompanyEntityCommand" />
 [DataContract]
 [Serializable]
-public abstract class InventoryItemBarcodeCommand : InventoryItemCommand
+public class InventoryItemBarcodeCommand : InventoryItemCommand
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="InventoryItemBarcodeCommand" /> class.
