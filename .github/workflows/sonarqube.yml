@@ -56,5 +56,5 @@ jobs:
           dotnet build './src/Infrastructure/Hexalith.Inventories.EventsWebApis/Hexalith.Inventories.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/UI/Hexalith.Inventories.UI/Hexalith.Inventories.UI.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/Servers/Hexalith.Server.Inventories/Hexalith.Server.Inventories.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './test/Hexalith.Inventories.UnitTests/Hexalith.Inventories.UnitTests.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './test/Hexalith.Inventories.UnitTests/Hexalith.Inventories.UnitTests.csproj' --collect:"Code Coverage"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
