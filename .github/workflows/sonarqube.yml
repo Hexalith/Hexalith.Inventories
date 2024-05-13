@@ -44,16 +44,16 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Hexalith_Hexalith.inventories" /o:"hexalith" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build './src/Domain/Hexalith.inventories.Domain.Abstractions/Hexalith.inventories.Domain.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Domain/Hexalith.inventories.Events/Hexalith.inventories.Events.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Domain/Hexalith.inventories.Domain/Hexalith.inventories.Domain.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Application/Hexalith.inventories.Commands/Hexalith.inventories.Commands.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Application/Hexalith.inventories.Application/Hexalith.inventories.Application.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Infrastructure/Hexalith.inventories.CommandsWebApis/Hexalith.inventories.CommandsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Infrastructure/Hexalith.inventories.DaprRuntime/Hexalith.inventories.DaprRuntime.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Infrastructure/Hexalith.inventories.DaprRuntime.Abstractions/Hexalith.inventories.DaprRuntime.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-          dotnet build './src/Infrastructure/Hexalith.inventories.EventsWebApis/Hexalith.inventories.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Hexalith_Hexalith.ExternalSystems" /o:"hexalith" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build './src/Domain/Hexalith.ExternalSystems.Domain.Abstractions/Hexalith.ExternalSystems.Domain.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Domain/Hexalith.ExternalSystems.Events/Hexalith.ExternalSystems.Events.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Domain/Hexalith.ExternalSystems.Domain/Hexalith.ExternalSystems.Domain.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Application/Hexalith.ExternalSystems.Commands/Hexalith.ExternalSystems.Commands.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Application/Hexalith.ExternalSystems.Application/Hexalith.ExternalSystems.Application.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Infrastructure/Hexalith.ExternalSystems.CommandsWebApis/Hexalith.ExternalSystems.CommandsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Infrastructure/Hexalith.ExternalSystems.DaprRuntime/Hexalith.ExternalSystems.DaprRuntime.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Infrastructure/Hexalith.ExternalSystems.DaprRuntime.Abstractions/Hexalith.ExternalSystems.DaprRuntime.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
+          dotnet build './src/Infrastructure/Hexalith.ExternalSystems.EventsWebApis/Hexalith.ExternalSystems.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/UI/Hexalith.Inventories.UI/Hexalith.Inventories.UI.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/Servers/Hexalith.Server.Inventories/Hexalith.Server.Inventories.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
