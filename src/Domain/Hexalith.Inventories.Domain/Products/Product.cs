@@ -21,6 +21,7 @@ using System.Runtime.Serialization;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
+using Hexalith.Domain.Messages;
 using Hexalith.Domain.Products;
 using Hexalith.Domain.ValueObjects;
 using Hexalith.Inventories.Events.Products;
@@ -74,7 +75,7 @@ public record Product(
     }
 
     /// <inheritdoc/>
-    public override (IAggregate Aggregate, IEnumerable<BaseEvent> Events) Apply(BaseEvent domainEvent)
+    public override (IAggregate Aggregate, IEnumerable<BaseMessage> Messages) Apply(BaseEvent domainEvent)
     {
         return (domainEvent switch
         {

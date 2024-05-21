@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Extensions", "Hexa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hexalith", "Hexalith", "{D2DA3040-462E-4E0E-9CFE-3EA95FA3D014}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.Security.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.Security.Abstractions\Hexalith.Infrastructure.Security.Abstractions.csproj", "{43CC200E-FEBE-44E0-B278-604872254DAA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.AzureActiveDirectory", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.AzureActiveDirectory\Hexalith.Infrastructure.AzureActiveDirectory.csproj", "{E6204AB7-62EC-41C2-9DEC-7727D3B87B08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.TestMocks", "Hexalith\src\Core\Common\Hexalith.TestMocks\Hexalith.TestMocks.csproj", "{BE07B798-CBB1-4DA7-B80D-7628F1E67894}"
@@ -57,8 +55,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{3D11F14C-AF25-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Domain.Surveys", "Hexalith\src\Core\Domain\Hexalith.Domain.Surveys\Hexalith.Domain.Surveys.csproj", "{398AB413-51AA-4973-A5D5-DD584C4F4B6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.Sales.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.Sales.Abstractions\Hexalith.Infrastructure.DaprRuntime.Sales.Abstractions.csproj", "{23F28329-F886-43F3-975E-1D0A4975D574}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.DaprRuntime.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.DaprRuntime.Abstractions\Hexalith.Infrastructure.DaprRuntime.Abstractions.csproj", "{552814D4-6853-4384-A270-47C7741D1332}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.Emails.MailKit", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.Emails.MailKit\Hexalith.Infrastructure.Emails.MailKit.csproj", "{A836AC21-33CC-479C-862D-99D6EB36917E}"
@@ -66,8 +62,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.Emails.SendGrid", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.Emails.SendGrid\Hexalith.Infrastructure.Emails.SendGrid.csproj", "{96BFBAF8-A4DB-41E1-B73E-6B44D775488B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.Emails.Abstractions", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.Emails.Abstractions\Hexalith.Infrastructure.Emails.Abstractions.csproj", "{93BDAAEA-DCF3-4A19-844B-7B699DF52EC7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.GoogleMaps", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.GoogleMaps\Hexalith.Infrastructure.GoogleMaps.csproj", "{C7CE8355-E198-4D5F-88AD-0498C1E4580C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.WebApis.Proxies", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.WebApis.Proxies\Hexalith.Infrastructure.WebApis.Proxies.csproj", "{2EA76081-D72D-4AE9-A10F-094FDC57FA44}"
 EndProject
@@ -78,8 +72,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.ClientAppOnWasm", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.ClientAppOnWasm\Hexalith.Infrastructure.ClientAppOnWasm.csproj", "{50915DCF-7731-411C-ADF9-0D36BB58E250}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.ClientApp", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.ClientApp\Hexalith.Infrastructure.ClientApp.csproj", "{85FA9E9F-A3CC-4DF9-94BA-CB0011954DC3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Application.Authorizations", "Hexalith\src\Core\Application\Hexalith.Application.Authorizations\Hexalith.Application.Authorizations.csproj", "{3B624A74-5F48-41C4-A1FD-043C6604C61B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Infrastructure.AspireService.Defaults", "Hexalith\src\Core\Infrastructure\Hexalith.Infrastructure.AspireService.Defaults\Hexalith.Infrastructure.AspireService.Defaults.csproj", "{80BF5C88-4E2B-4B76-A521-88CF4A880B16}"
 EndProject
@@ -160,10 +152,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_global", "_global", "{892E
 		.editorconfig = .editorconfig
 		src\BuildFiles\.stylecop.json = src\BuildFiles\.stylecop.json
 		src\BuildFiles\.stylecop.ruleset = src\BuildFiles\.stylecop.ruleset
-		src\Servers\publish_containers.ps1 = src\Servers\publish_containers.ps1
 		LICENSE = LICENSE
+		src\Servers\publish_containers.ps1 = src\Servers\publish_containers.ps1
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Application.Modules.Abstractions", "Hexalith\src\Core\Application\Hexalith.Application.Modules.Abstractions\Hexalith.Application.Modules.Abstractions.csproj", "{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Application.Modules", "Hexalith\src\Core\Application\Hexalith.Application.Modules\Hexalith.Application.Modules.csproj", "{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,10 +171,6 @@ Global
 		{1959557F-5EAF-4B1E-BF3F-313AC68EFA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1959557F-5EAF-4B1E-BF3F-313AC68EFA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1959557F-5EAF-4B1E-BF3F-313AC68EFA49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43CC200E-FEBE-44E0-B278-604872254DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43CC200E-FEBE-44E0-B278-604872254DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43CC200E-FEBE-44E0-B278-604872254DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43CC200E-FEBE-44E0-B278-604872254DAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6204AB7-62EC-41C2-9DEC-7727D3B87B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E6204AB7-62EC-41C2-9DEC-7727D3B87B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6204AB7-62EC-41C2-9DEC-7727D3B87B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -251,10 +243,6 @@ Global
 		{398AB413-51AA-4973-A5D5-DD584C4F4B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{398AB413-51AA-4973-A5D5-DD584C4F4B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{398AB413-51AA-4973-A5D5-DD584C4F4B6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23F28329-F886-43F3-975E-1D0A4975D574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23F28329-F886-43F3-975E-1D0A4975D574}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23F28329-F886-43F3-975E-1D0A4975D574}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23F28329-F886-43F3-975E-1D0A4975D574}.Release|Any CPU.Build.0 = Release|Any CPU
 		{552814D4-6853-4384-A270-47C7741D1332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{552814D4-6853-4384-A270-47C7741D1332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{552814D4-6853-4384-A270-47C7741D1332}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -271,10 +259,6 @@ Global
 		{93BDAAEA-DCF3-4A19-844B-7B699DF52EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93BDAAEA-DCF3-4A19-844B-7B699DF52EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93BDAAEA-DCF3-4A19-844B-7B699DF52EC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7CE8355-E198-4D5F-88AD-0498C1E4580C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7CE8355-E198-4D5F-88AD-0498C1E4580C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7CE8355-E198-4D5F-88AD-0498C1E4580C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7CE8355-E198-4D5F-88AD-0498C1E4580C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2EA76081-D72D-4AE9-A10F-094FDC57FA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2EA76081-D72D-4AE9-A10F-094FDC57FA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA76081-D72D-4AE9-A10F-094FDC57FA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -295,10 +279,6 @@ Global
 		{85FA9E9F-A3CC-4DF9-94BA-CB0011954DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85FA9E9F-A3CC-4DF9-94BA-CB0011954DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85FA9E9F-A3CC-4DF9-94BA-CB0011954DC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B624A74-5F48-41C4-A1FD-043C6604C61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B624A74-5F48-41C4-A1FD-043C6604C61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B624A74-5F48-41C4-A1FD-043C6604C61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B624A74-5F48-41C4-A1FD-043C6604C61B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80BF5C88-4E2B-4B76-A521-88CF4A880B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80BF5C88-4E2B-4B76-A521-88CF4A880B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80BF5C88-4E2B-4B76-A521-88CF4A880B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -379,6 +359,14 @@ Global
 		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57A53E6F-676D-476F-93C3-01A11FF782B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -390,7 +378,6 @@ Global
 		{AA983AFF-9CBC-4F2A-98E3-3CACA5039C61} = {45BF37A5-A98F-40C9-A990-79F051A3057B}
 		{5A9735A3-CEE9-4E50-B2FD-54F0BF402002} = {45BF37A5-A98F-40C9-A990-79F051A3057B}
 		{1959557F-5EAF-4B1E-BF3F-313AC68EFA49} = {4BF53A8A-B344-4C1A-AE24-1FC41E2188E9}
-		{43CC200E-FEBE-44E0-B278-604872254DAA} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{E6204AB7-62EC-41C2-9DEC-7727D3B87B08} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{BE07B798-CBB1-4DA7-B80D-7628F1E67894} = {4BF53A8A-B344-4C1A-AE24-1FC41E2188E9}
 		{735CE2B7-2572-4E3F-8B57-C55F9A69448E} = {AA983AFF-9CBC-4F2A-98E3-3CACA5039C61}
@@ -410,18 +397,15 @@ Global
 		{29551DAF-21B8-4C4D-A765-4F75D1758CB9} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{3D11F14C-AF25-4D09-8182-568B18EB78FC} = {45BF37A5-A98F-40C9-A990-79F051A3057B}
 		{398AB413-51AA-4973-A5D5-DD584C4F4B6C} = {5A9735A3-CEE9-4E50-B2FD-54F0BF402002}
-		{23F28329-F886-43F3-975E-1D0A4975D574} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{552814D4-6853-4384-A270-47C7741D1332} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{A836AC21-33CC-479C-862D-99D6EB36917E} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{96BFBAF8-A4DB-41E1-B73E-6B44D775488B} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{93BDAAEA-DCF3-4A19-844B-7B699DF52EC7} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
-		{C7CE8355-E198-4D5F-88AD-0498C1E4580C} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{2EA76081-D72D-4AE9-A10F-094FDC57FA44} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{2CF8A627-8BB7-4762-ABE7-51B9A3560774} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{E0F6C228-71C2-4610-B8EA-2A4DCA9DDE2C} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{50915DCF-7731-411C-ADF9-0D36BB58E250} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{85FA9E9F-A3CC-4DF9-94BA-CB0011954DC3} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
-		{3B624A74-5F48-41C4-A1FD-043C6604C61B} = {AA983AFF-9CBC-4F2A-98E3-3CACA5039C61}
 		{80BF5C88-4E2B-4B76-A521-88CF4A880B16} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{0D3A0C8C-15F2-4A0C-8A1C-BD54BCB8FEE1} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
 		{A9D47971-C5E1-4EE0-B355-23D0B0EE00BC} = {FA933B2A-DC9F-44A0-94C7-C5D2D49C550B}
@@ -449,6 +433,8 @@ Global
 		{92269465-385D-4598-9883-28379DE598C6} = {3D11F14C-AF25-4D09-8182-568B18EB78FC}
 		{57A53E6F-676D-476F-93C3-01A11FF782B5} = {69351242-0215-4623-91C6-1CD2F23D17AB}
 		{892E2B9B-3FF1-4098-9A6C-CD97CAB5A540} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
+		{1078AA88-6A2F-45FF-908F-3DC7EAAB68A8} = {AA983AFF-9CBC-4F2A-98E3-3CACA5039C61}
+		{60EC4EFD-3B4E-4A6A-ABDF-7630B64516AF} = {45BF37A5-A98F-40C9-A990-79F051A3057B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09CBB595-8996-4C7F-9C48-4C58AD9293AC}

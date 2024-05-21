@@ -22,6 +22,7 @@ using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
 using Hexalith.Domain.InventoryItems;
+using Hexalith.Domain.Messages;
 using Hexalith.Domain.ValueObjects;
 using Hexalith.Inventories.Events.InventoryItems;
 
@@ -73,7 +74,7 @@ public record InventoryItem(
     }
 
     /// <inheritdoc/>
-    public override (IAggregate Aggregate, IEnumerable<BaseEvent> Events) Apply(BaseEvent domainEvent)
+    public override (IAggregate Aggregate, IEnumerable<BaseMessage> Messages) Apply(BaseEvent domainEvent)
     {
         return domainEvent switch
         {
