@@ -1,6 +1,8 @@
 <Project>
 	<PropertyGroup>
-		<HexalithProps>$([MSBuild]::GetPathOfFileAbove('Hexalith.props', '$(MSBuildThisFileDirectory)..'))</HexalithProps>
+		<UseProjectReference Condition="'$(UseProjectReference)' == '' and '$(BuildingByReSharper)' == 'true'">true</UseProjectReference>
+		<UseProjectReference Condition="'$(UseProjectReference)' == '' and '$(BuildingInsideVisualStudio)' == 'true'">true</UseProjectReference>
+		<HexalithProps>$([MSBuild]::GetPathOfFileAbove('Hexalith.props', '$(MSBuildThisFileDirectory)'))</HexalithProps>
 	</PropertyGroup>
 	<Import Project="$(HexalithProps)" Condition=" '$(HexalithProps)' != '' " />
 	<Import Project="src\BuildFiles\Project.Common.props" />
